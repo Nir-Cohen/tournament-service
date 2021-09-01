@@ -1,3 +1,3 @@
-class UsersController < ApplicationController
+class PlayersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 end
