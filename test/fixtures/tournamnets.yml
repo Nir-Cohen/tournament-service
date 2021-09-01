@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startDate: 2021-08-31 11:36:10
+  endDate: 2021-08-31 11:36:10
+  results: 1
+
+two:
+  startDate: 2021-08-31 11:36:10
+  endDate: 2021-08-31 11:36:10
+  results: 1

@@ -1,0 +1,32 @@
+<%= form_with(model: tournamnet) do |form| %>
+  <% if tournamnet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tournamnet.errors.count, "error") %> prohibited this tournamnet from being saved:</h2>
+
+      <ul>
+        <% tournamnet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :startDate %>
+    <%= form.datetime_select :startDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endDate %>
+    <%= form.datetime_select :endDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :results %>
+    <%= form.number_field :results %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

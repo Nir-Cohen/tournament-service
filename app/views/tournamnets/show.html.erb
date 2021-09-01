@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @tournamnet.startDate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @tournamnet.endDate %>
+</p>
+
+<p>
+  <strong>Results:</strong>
+  <%= @tournamnet.results %>
+</p>
+
+<%= link_to 'Edit', edit_tournamnet_path(@tournamnet) %> |
+<%= link_to 'Back', tournamnets_path %>
