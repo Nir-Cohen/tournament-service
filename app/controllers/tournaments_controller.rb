@@ -11,11 +11,11 @@ class TournamentsController < ApplicationController
     tournament.start_date = params[:startDate]
     tournament.end_date = params[:endDateTime]
     results = params[:results]
-    results.each do |i|
+    results.each do |result|
       player = Player.new
-      player.user_id = i[:userId]
-      player.correct_questions = i[:correctQuestions]
-      player.incorrent_questions = i[:incorrectQuestions]
+      player.user_id = result[:userId]
+      player.correct_questions = result[:correctQuestions]
+      player.incorrent_questions = result[:incorrectQuestions]
       player.tournament_id = tournament.tournament_id
       player.save
     end
@@ -23,7 +23,7 @@ class TournamentsController < ApplicationController
 
  end 
  def getTournamentResults
-  results = Player.where("tournament_id=?", params["tournamentId"])
+  results = Player.where(tournament_id: params["tournamentId"])
   respond_to do |format|
    format.json {render json: results }
   end
