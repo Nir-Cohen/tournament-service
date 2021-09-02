@@ -7,7 +7,7 @@ class TournamentsController < ApplicationController
     #TODO: adding validation to the models
     tournament = Tournament.new
 
-    tournament.tournament_id = params["tournamentId"]
+    tournament.tournament_id = params[:tournamentId]
     tournament.start_date = params[:startDate]
     tournament.end_date = params[:endDateTime]
     results = params[:results]
